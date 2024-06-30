@@ -6,10 +6,10 @@
 }
 
 :root {
-    --clr-lightRed: hsl(0, 100%, 67%, 0.1);
-    --clr-orangeyYellow: hsl(39, 100%, 56%, 0.1);
-    --clr-greenTeal: hsl(166, 100%, 37%, 0.1);
-    --clr-cobaltBlue: hsl(234, 85%, 45%, 0.1);
+    --clr-lightRed: hsl(0, 100%, 67%);
+    --clr-orangeyYellow: hsl(39, 100%, 56%);
+    --clr-greenTeal: hsl(166, 100%, 37%);
+    --clr-cobaltBlue: hsl(234, 85%, 45%);
     --clr-white: hsl(0, 0%, 100%);
     --clr-paleBlue: hsl(221, 100%, 96%);
     --clr-lightLavender: hsl(241, 100%, 89%);
@@ -102,27 +102,88 @@ main {
     }
 
     > .reaction-bar {
-        padding: 10px;
+        padding: 15px 10px;
         border-radius: 10px;
-        background-color: var(--clr-lightRed);
+        background-color: hsl(0, 100%, 67%, 0.1);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .reaction {
+            display: flex;
+            align-content: center;
+            gap: 3px;
+            color: var(--clr-lightRed);
+            font-weight: var(--fw-mediumBold);
+        }
     }
 
     > .memory-bar {
-        padding: 10px;
+        padding: 15px 10px;
         border-radius: 10px;
-        background-color: var(--clr-orangeyYellow);
+        background-color: hsl(39, 100%, 56%, 0.1);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .memory {
+            display: flex;
+            align-content: center;
+            gap: 3px;
+            color: var(--clr-orangeyYellow);
+            font-weight: var(--fw-mediumBold);
+        }
     }
 
     > .verbal-bar {
-        padding: 10px;
+        padding: 15px 10px;
         border-radius: 10px;
-        background-color: var(--clr-greenTeal);
+        background-color: hsl(166, 100%, 37%, 0.1);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .verbal {
+            display: flex;
+            align-content: center;
+            gap: 3px;
+            color: var(--clr-greenTeal);
+            font-weight: var(--fw-mediumBold);
+        }
     }
 
     > .visual-bar {
-        padding: 10px;
+        padding: 15px 10px;
         border-radius: 10px;
-        background-color: var(--clr-cobaltBlue);
+        background-color: hsl(234, 85%, 45%, 0.1);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .visual {
+            display: flex;
+            align-content: center;
+            gap: 3px;
+            color: var(--clr-cobaltBlue);
+            font-weight: var(--fw-mediumBold);
+        }
+    }
+
+    .button {
+        padding: 15px;
+        background-color: var(--clr-darkGrayBlue);
+        color: var(--clr-white);
+        text-align: center;
+        border-radius: 50px;
+    }
+}
+
+.summary .puntuation {
+    margin-right: 0;
+    margin-left: auto;
+
+    > p {
+        font-weight: var(--fw-mediumBold);
+
+        > span {
+            color: #666;
+        }
     }
 }
 
