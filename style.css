@@ -37,7 +37,8 @@ main {
 
 .active-states {
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 .active-states .result {
@@ -203,6 +204,7 @@ main {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         box-shadow: 0 0 10px 5px var(--clr-paleBlue);
         border-radius: 20px;
